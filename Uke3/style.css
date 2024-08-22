@@ -1,0 +1,23 @@
+.shadow{
+    height: 100px;
+    width: 100px;
+    box-shadow: 7px 5px 5px
+}
+.pink {
+ background-color: pink;
+}
+.green{
+ background-color: green;
+}
+.blue{
+ background-color: lightblue;
+}
+.yellow{
+ background-color: yellow;
+}
+.purple{
+ background-color: purple;
+}
+.orange{
+ background-color: orange;
+}

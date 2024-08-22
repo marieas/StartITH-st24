@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!--1. Sette bildesti direkte i HTML  -->
+    <img src="terje1.jpg" class="shadow pink">
+
+    <!--2. Sette bildesti når man trykker på den  -->
+    <img id="strengeTerjeIMG" class="shadow green" onclick="setToTerjepic2()">
+
+    <!--3. Sette bildesti med this  -->
+    <img class="shadow blue" onclick="terjePic3(this,'200px')">
+
+    <!--4. Sette bildesti med parameter når man trykker  -->
+    <img class="shadow yellow" onclick="terjePic3(this, '150px')">
+
+    <!--5. Sette bildesti med 2 parametere når man trykker
+    vis i consol at man har kjørt funksjonen, og 
+    hvilke verdier parametrene har fått
+    -->
+    <img class="shadow purple" onclick="setImgSrc('terje1.jpg', this)">
+    <img class="shadow purple" onclick="setImgSrc('terje2.jpg', this)">
+    <img class="shadow purple" onclick="setImgSrc('terje3.jpg', this)">
+ 
+    <!--5. Sette random bildesti når man trykker  -->
+    <img class="shadow orange" onclick="setRandomSrc(this)">
+
+    <div onclick="setSelectedPerson(this)">Kåre</div>
+    <div onclick="setSelectedPerson(this)">Bjarne</div>
+    <div onclick="setSelectedPerson(this)">Truls</div>
+    <div onclick="setSelectedPerson(this)">Arnulf</div>
+    <div id="selectedPerson">Selected person: </div>
+    <script>
+        function setRandomSrc(imgElement){
+            // gir tallet 0, 1, 2, 3
+            let randomNum = Math.floor(Math.random() * 4);
+            let myBoolean = true;
+            console.log(randomNum)
+
+            if(randomNum == 0){
+                imgElement.src = 'terje1.jpg'
+            }
+            else if(randomNum == 1){
+                imgElement.src = 'terje2.jpg'
+            }
+            else if(randomNum == 2){
+                imgElement.src = 'terje3.jpg'
+            }
+            else{
+                imgElement.src = 'terje4.jpg'
+            }
+           
+        }
+
+        function setImgSrc(source, imgElement){
+            imgElement.src = source
+        }
+        // PAUSE TIL 13.24 XD 
+        function setToTerjepic2(){
+            document.getElementById('strengeTerjeIMG').src = 'terje2.jpg'
+        }
+
+        function terjePic3(imgTag, newHeight){
+            console.log(imgTag)
+            imgTag.src = 'terje3.jpg'
+            imgTag.style.height = newHeight
+        }
+        function setSelectedPerson(selectedDiv){
+            document.getElementById('selectedPerson').innerHTML = selectedDiv.innerHTML
+        }
+    </script>
+</body>
+</html>
