@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .answer{
+            background-color: lightgray;
+        }
+        .container {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+       // pause til 10.53
+        //MVC - Model View Controller
+
+        //Model
+        let name = '';
+        let work = '';;
+        let food = '';;
+       
+
+       //Controller
+       function setName(nameInput){      
+        name = nameInput
+       }
+       function setWorkplace(workInput){
+        work = workInput;
+       }
+       function setFood(foodInput){
+        food = foodInput;
+       }
+
+       function getRandomAnswers(){
+        //finne random navn, work, food
+        getRandomName()
+        work = getRandomWork()
+        console.log('navn er:' + name)
+        updateView()
+       }
+
+       function getRandomWork(){
+        let randomNbr = Math.floor(Math.random() * 3) +1; // 1, 2, 3
+        console.log(randomNbr)
+        // bruke if/else til å sette variablen name
+        if(randomNbr == 1){
+           return 'MCdonalds'
+        }
+        else if(randomNbr == 2){
+            return 'Jotun'
+        }
+        else{
+            return 'Rema1000'
+        }
+        // 3 forskjellige navn som mulighet
+        // random
+       }
+
+       function getRandomName(){
+        let randomNbr = Math.floor(Math.random() * 3) +1; // 1, 2, 3
+        console.log(randomNbr)
+        // bruke if/else til å sette variablen name
+        if(randomNbr == 1){
+            name = 'Trine'
+        }
+        else if(randomNbr == 2){
+            name = 'Sebastian'
+        }
+        else{
+            name = 'Therese'
+        }
+        // 3 forskjellige navn som mulighet
+        // random
+       }
+
+       function getContainer(){
+        return /*HTML*/`<div class="container">
+        Name: <input onchange="setName(this.value)"/>
+        Work: <input onchange="setWorkplace(this.value)"/>
+        Meal: <input onchange="setFood(this.value)"/>
+        <button class="answer" onclick="updateView()">Submit</button>
+        <button class="answer" onclick="getRandomAnswers()">Get random answers</button>
+        </div>`
+       }
+       //View
+       updateView()
+       function updateView(){
+        let htmlStr = /*HTML*/`
+        <div>My Name is:</div><div class="answer">${name}</div>
+        <div>I Work at:</div><div class="answer">${work}</div> 
+        <div>My Favorite meal is:</div><div class="answer">${food}</div>
+        <div>${getContainer()}</div>
+        ` 
+        document.getElementById('app').innerHTML = htmlStr;
+        //document.getElementById('nameBar').innerText =  name;
+        //document.getElementById('workBar').innerText =  work;
+        //document.getElementById('foodBar').innerText =  food;
+       }
+    </script>
+</body>
+</html>
