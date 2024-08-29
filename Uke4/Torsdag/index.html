@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+       /*     
+        Steg 1. Hvilke verdier basert på det man ser på skjermen
+        kan endre seg? -> lag variabler man vil trenge i modell
+
+        Steg 2. Tegn opp view med funksjon
+
+        Steg 3. Identifiser og lag tomme metoder vi vil ha behov for,
+        som skal oppdatere verdien på det som endrer seg 
+
+        Steg 4. Implementer funksjonalitet for en og en ting
+        */
+
+        //Model
+        let selectedQuestion = 'Her kommer et spørsmål....';
+        let sarcasmDetectionText = 'result';
+        let imgSrc = ''
+        let sarcasmResult;
+
+        //Controller
+        function getRandomQuestion(){
+
+            let randNum =  Math.floor(Math.random() * 4) // 0, 1, 2, 3
+
+            if(randNum == 0){
+                selectedQuestion = 'Hvordan har du det idag?'
+            }
+            else if(randNum == 1){
+                selectedQuestion = 'Hva synes du om kodetimene til Marie?'
+            }
+            else if(randNum == 2){
+                selectedQuestion = 'Hva tenker du når du hører navnet Bjarne?'   
+            }
+            else{
+                selectedQuestion = 'Hvorfor har du ikke på kamera?'   
+            }
+            updateView()
+        }
+
+        function getUserInput(userInput){
+            sarcasmChecker(userInput)
+        }
+
+        function sarcasmChecker(userInput){
+           sarcasmResult = userInput.includes('...') //er teksten sarkastisk? true/false
+           if(sarcasmResult == true){
+                sarcasmDetectionText = 'Du var sarkastisk! :( '
+           }
+           else{
+                sarcasmDetectionText = 'Du var ærlig :D '
+           }
+           updateImg()
+           updateView()
+        }
+
+        function updateImg(){
+            if(sarcasmResult == true){
+                imgSrc = 'sarcasm.jpg'
+           }
+           else{
+                imgSrc = 'notSarcasm.jpg'
+           }
+        }
+
+        //View
+        updateView()
+        function updateView(){
+            let html = /*HTML*/`
+            <div>${selectedQuestion}</div>
+            <button onclick="getRandomQuestion()">Random Question</button>
+            <input onchange="getUserInput(this.value)"/>
+            <div>${sarcasmDetectionText}</div>
+            <img src="${imgSrc}"/>
+            `
+            document.getElementById('app').innerHTML = html
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+        Oppgave: Sarkasmedetektor
+
+        Random tekst med spørsmål:
+
+        Hvordan har du det idag?
+        Hva synes du om kodetimene til Marie?
+        Hva tenker du når du hører navnet Bjarne?
+        Hvorfor har du ikke på kamera?
+
+        Knapp som kan gi et vilkårlig spørsmål
+        (Man får ikke lov til å få et nytt spørsmål før man har svart på det forrige)
+        Input felt der du kan skrive respons
+
+        Ta imot input fra brukeren
+        Sjekke om det brukeren skrev var sarkastisk
+        Skriv en tekst om det var sarkatisk eller ikke
+        oppdater med bilde
