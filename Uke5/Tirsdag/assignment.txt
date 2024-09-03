@@ -1,0 +1,27 @@
+Ulike typer operatører: 
+
+---------------------------------------------------------
+Tilordningsoperatører  =, +=, -=,  *=, /=
+---------------------------------------------------------
+Regneoperatører  +, -, *, /, and %
+---------------------------------------------------------
+Sammenligningsoperatører  ==, !=, ===, !==, >, <, >=, <=
+---------------------------------------------------------
+Logiske operatører  &&, ||, !
+---------------------------------------------------------
+
+Vi skal lage et lite adventure spill med en utforsker på tur
+
+1. Utforskeren har et navn, helse, energi og gull
+2. Utforskeren kan søke gjennom skogen for å se om han finner noe skatt
+ (50% sjangs for at han finner noe)
+    - Dersom han finner skatt skal det være mellom 10-50 gold som utforskeren får beholde
+3. Utforskeren kan møte på et monster som har en gitt helse og et navn
+4. Utforskeren kan slå på monsteret (fast eller random styrke),
+ og da slår monsteret tilbake (fast eller random styrke)
+    - Om utforskeren får 0 i helse er det game over
+    - Om monsteret får 0 i helse mister utforskeren energi men kan fortsette på turen sin
+
+Hva ønsker vi å vise frem?
+Hvilke data trenger vi å ta vare på?
+Hvilke funksjoner trenger vi? 
