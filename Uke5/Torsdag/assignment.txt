@@ -1,0 +1,18 @@
+Vi skal lage en "claw machine"
+som inneholder noen forskjellige leker man
+kan vinne.
+Man får en tilfeldig premie av et utvalg
+Feks(bamse, pokemonleke, jojo?)
+
+Man er nødt til å legge på mynter (10,20 eller 50)
+
+Hvert spill koster 5kr
+
+Vi har med vesken vår som er fylt med 100kr til å 
+starte med.
+
+Man kan velge å spille så lenge man har nok penger 
+igjen i maskinen
+Vekslepenger dersom man er ferdig å spille
+
+vis frem premier
