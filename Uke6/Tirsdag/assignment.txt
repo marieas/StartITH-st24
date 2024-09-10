@@ -1,0 +1,9 @@
+"Kaste under bussen app" 
+- legge inn navn m/input 
+=> lagre i array, 
+se alle som ligger i arrayet på skjermen 
+=> lage KAST UNDER BUSSEN! knapp som trekekr en random og viser navnet på skjermen 🤷
+
+Evt også bygge vidre på den - til en oppgavefordelings app!  
+Kunne legge inn hvilke oppgaver som trengs å gjøres  
+-trekke random oppgave og koble med random navn 

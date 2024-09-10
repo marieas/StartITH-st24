@@ -26,6 +26,18 @@ function updateView(){
     `
 }
 
+function displayToys(){
+    let html = `` 
+
+    // en tellevariabel (og startverdien den skal ha), 
+    // en betingelse for hvor mange ganger løkken skal kjøre
+    // hva skal skje med telleren for hver "runde" i løkken
+    for(let i = 0; i < toys.length; i++){
+        html += `<div>${toys[i]}</div>`
+    }
+    return html;
+}
+
 //Controller
 function purseHasEnoughCoins(coinAmount){
   //Sjekke om du har nok penger til å legge inn
@@ -66,14 +78,3 @@ function showPrize(){
     updateView();
 }
 
-function displayToys(){
-    let html = `` 
-
-    // en tellevariabel (og startverdien den skal ha), 
-    // en betingelse for hvor mange ganger løkken skal kjøre
-    // hva skal skje med telleren for hver "runde" i løkken
-    for(let i = 0; i < toys.length; i++){
-        html += `<div>${toys[i]}</div>`
-    }
-    return html;
-}
