@@ -1,8 +1,8 @@
 updateView()
 function updateView(){
     document.getElementById('app').innerHTML = /*HTML*/`
-    <img src="muffins.jpg" height='100px' onclick="addItem(this,1)">
-    <div>Price: 20kr</div>
+    <img src="${cupcake.img}" height='100px' onclick="addItem(this,1)">
+    <div>Price: ${cupcake.price}</div>
     <img src="cola.jpg" height='100px' onclick="addItem(this,2)">
     <div>Price: 30kr</div>
     <img src="banana.jpg" height='100px' onclick="addItem(this,0)">

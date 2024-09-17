@@ -1,0 +1,10 @@
+Vi skal lage et oppslagsverk av personer
+En person har et navn, alder, adresse
+
+1. Lag en samling av data (5 personer med ulik info)
+2. Vis frem listen av personer
+3. Man skal kunne søke opp enkeltpersoner basert på navn eller adresse
+4. Filtrere på alder (over en gitt alder)
+5. Man skal kunne legge inn en ny person til samlingen
+6. Man skal kunne oppdatere adressen til spesifikke personer
+7. Legg til funksjonalitet for å slette noen fra samlingen
