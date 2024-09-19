@@ -1,0 +1,20 @@
+Vi skal lage et bilverksted!
+Ulike typer biler ligger inne på verkstedet 
+som trenger å fikses
+Bilene kjennes igjen på Registreringsnummer,
+ Merke og farge.
+Bilene kan ha forskjellige feil - kokt motor, 
+ødelagte bremser, feil i dieselsystemet o.l
+Det er også noen forskjellige Mekanikere som
+ jobber på verkstedet -
+Vi skal lage en app som viser frem bilene
+ som trengs fikses,
+Så skal vi kunne starte prosess med å
+ plukke en og en av de
+ - assigne en mekaniker til å fikse feilen
+Ekstra: Mekanikerne har 'spesialist'
+ områder innenfor hvilke bildeler de er best på å fikse 
+ - hvordan finne
+rett mekaniker til rett bil?
+- intro til id :O
+50% sjans mekaniker F*CKER opp
